@@ -17,8 +17,6 @@ workflows:
   build-and-test-workflow:
     jobs:
       - test-and-lint
-
-      
 # # This config was automatically generated from your source code
 # # Stacks detected: deps:python:.,file:manage.py:.
 # version: 2.1
