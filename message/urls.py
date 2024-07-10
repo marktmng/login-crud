@@ -24,4 +24,5 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('chat/', include('chat.urls')),
     path('auth/', obtain_auth_token), # Added for authentication
+    
 ]
