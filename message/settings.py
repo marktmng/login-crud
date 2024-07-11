@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'chat',
     'corsheaders', ## added
-    'rest_framework.authtoken', # added
+    'rest_framework.authtoken', # added for token based authentication
 ]
 
 MIDDLEWARE = [
