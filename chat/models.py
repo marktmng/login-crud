@@ -6,6 +6,8 @@ class ChatRoom(models.Model):
     name = models.CharField(max_length=255)
     create_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
+    members = models.ManyToManyField(User, related_name="chat_room_pytmembers")
     
     def __str__(self):
         return self.name
