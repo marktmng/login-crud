@@ -1,11 +1,12 @@
-from django.urls import path
+from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from chat.viewsets import ChatRoomViewSets
+from chat.viewsets import ChatRoomViewSets, UserViewSet
 from chat.views import sumNumbersView
 
 router = DefaultRouter()
 router.register("chatroom", ChatRoomViewSets, basename="chatroom")
 router.register("message", ChatRoomViewSets, basename="message")
+router.register(r'users', UserViewSet)
 urlpatterns = router.urls
 
 urlpatterns += [
